@@ -112,8 +112,18 @@ window.onload = function () {
 
 
 function initCategoriesDropdown() {
+let categoriesDropdown = document.querySelector('#categoriesSelect')
+let defaultOption = document.createElement('option')
+defaultOption.textContent = 'Select a category'
+defaultOption.value = ''
+categoriesDropdown.appendChild(defaultOption)
 
-    
+    categories.forEach((category)=>{
+        let newOption = document.createElement('option')
+        newOption.value = category
+        newOption.textContent = category
+        categoriesDropdown.appendChild(newOption)
+    })
 
 }
 
